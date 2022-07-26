@@ -55,7 +55,11 @@ header{
     }
 
     nav{
-        padding: 10px 0px;
+        padding: 5px 5px;
+    }
+
+    .nav-menu{
+        font-size: small;
     }
 }
 
@@ -144,17 +148,14 @@ footer{
 }
 
 .container{
-    padding: 20px 30px;
-    width: 100%;
-    height: 430px;
-    display: flex;
-
-    justify-content: center;
-    margin: auto;
+    display: grid;
+    gap: 150px;
+    grid-auto-rows: 22rem;
+    grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
 }
 
 .container .card{
-    width: 330px;
+    width: 350px;
     height: 430px;
     border-radius: 8px;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
@@ -171,12 +172,12 @@ footer{
 }
 
 .container .card img{
-    width: 330px;
+    width: 350px;
     height: 220px;
 }
 
 .container .card iframe{
-    width: 330px;
+    width: 350px;
     height: 220px;
 }
 
@@ -196,13 +197,7 @@ footer{
     margin-top: 10px;
 }
 
-.item{
-    display: inline-block;
-    background: #224381;
-    color: #fff;
-    padding: 10px 20px;
-    align-items: center;
-}
+
 
 .items{
     display: inline-block;
@@ -244,23 +239,23 @@ div.pie{
     background-color:gray;
 }
 
-table{
-    margin: 0 auto;
-}
-
-table.partidos{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    caption-side: bottom;
-    margin-left: auto;
-    margin-right: auto;
-    border-collapse:collapse;
-}
-
 th{
     background-color: #224381;
     color: #fff;
     text-align: center;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 800px){
+    table{
+        font-size: 10px;
+    }
+    th{
+        font-size: 10px;
+    }
+    form{
+        font-size: 10px;
+    }
 }
 
 td{
@@ -270,8 +265,8 @@ td{
 
 td,th{
     border: 2px solid black;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -290,13 +285,38 @@ td,th{
     font-weight: 100;
 }
 
+@media screen and (max-width: 800px){
+    .team{
+        font-size: 50px;
+    }
+}
+
 .menu{
-    
     display: flex;
     align-items: center;
     margin: 0 auto;
     display: inline-block;
+    margin-bottom: 10px;
 }
+
+.item{
+    display: inline-block;
+    background: #224381;
+    color: #fff;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+@media screen and (max-width: 800px){
+    .item{
+        font-size: 15px;
+        display: inline-block;
+        margin: 0 0;
+        align-items: center;
+        padding: 5px 5px;
+    }
+}
+
 
 .team-list{
     margin-bottom: 20px;
@@ -318,12 +338,24 @@ div.CuerpoTecnico{
     color: white;
     margin-top: 50px;
     margin-bottom: 100px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
+@media screen and (max-width: 800px){
+    .contacto{
+        margin-top: 50px;
+        margin-bottom: 100px;
+        margin-left: 10px;
+        margin-right:10px;
+        padding: 10px 20px;
+    }
+}
+    
+
+
 .destacados{
-    margin-bottom: 100px;
+    margin-bottom: 200px;
 }
 
 .contact{
@@ -335,10 +367,23 @@ div.CuerpoTecnico{
     font-weight: 100;
 }
 
+@media screen and (max-width: 800px){
+    .contact{
+        font-size: 40px;
+    }
+}
+    
+
 .duda{
-    margin-left: 20px;
+    margin-left: 30px;
     font-size: 40px;
     color: antiquewhite;
+}
+
+@media screen and (max-width: 800px){
+    .duda{
+        font-size: 30px;
+    }
 }
 
 .parrafo{
@@ -348,10 +393,13 @@ div.CuerpoTecnico{
     margin-left: 20px;
     margin-top: 20px;
 } 
-.form{
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-bottom: 25px;
+
+@media screen and (max-width: 800px){
+    .parrafo{
+        font-size: 15px;
+        text-align: justify;
+        margin-right: 10px;
+    }
 }
 
 legend{
@@ -362,14 +410,29 @@ legend{
     margin-left: 10px;
 }
 .consulta{
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
     padding-bottom: 25px;
 }
 
-.boton{
-    margin-left: 50px;
-    margin-bottom: 10px;
+@media screen and (max-width: 800px){
+    .consulta{
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-bottom: 15px;
+    }
+}
+
+.cons{
+    width: 700px;
+    height: 100px;
+}
+
+@media screen and (max-width: 800px){
+    .cons{
+        width: 100%;
+        height: 100px;
+    }
 }
 
 .historias{
@@ -388,6 +451,35 @@ legend{
     margin: 20px;
 }
 
+.historias{
+    background-color: #224381;
+    border: solid black 5px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.marco{
+    background-color: lightblue;
+    border: solid black 5px;
+    margin: 20px;
+    padding: 5% 5%;
+}
+
+.marco p{
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+table.partidos{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    caption-side: bottom;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
 /* Inicio de grid */
 .grid-container{
     grid-template-columns: 1fr 1fr;
