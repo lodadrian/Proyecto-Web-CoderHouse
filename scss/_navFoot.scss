@@ -1,0 +1,120 @@
+//header
+
+.header{
+    width: $completo;
+    background-color: $colorNav;
+    display: flex;
+    justify-content: space-between;
+    min-height: 80px;
+    align-items: center;
+    padding: 5px;
+    div{
+        display: flex;
+        align-items: center;
+        color: $colorLinks;
+        img{
+                height: 50px;
+                margin-right: 10px;
+        }
+    }
+}
+
+//menu
+.nav-menu{
+    a{
+        font-weight: $links;
+        padding-right: 10px;
+        font-family: $font;
+        color: $colorLinks;
+        text-decoration: $deco;
+        &:hover{
+            color: $fondoHover;
+        }            
+    }
+}
+
+@media (max-width: 500px){
+    .header{
+        flex-direction: column;
+    }
+
+    nav{
+        padding: 5px 5px;
+    }
+
+    .nav-menu{
+        font-size:$peque;
+    }
+}
+
+//Footer
+footer{
+    width: $completo;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    padding: 2rem 8%;
+    background-color: $colorFooter;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    img{
+        height: 80px;
+        margin-bottom: 1rem;
+    }
+    div{
+        height: 80px;
+        margin-bottom: 1rem;
+        a{
+            height: 40px;
+            width: 40px;
+            border-radius: 50px;
+            border:1px solid $colorFoot;
+            background-image: url(Imagenes/Redes/facebook.png);
+            background-size: 40%;
+            background-repeat: no-repeat;
+            margin: 1rem;
+            &:hover{
+                
+                    background-color: $black;
+                    filter: invert(1);
+            }
+            img{
+                height: 40px;
+                width: 40px;
+            }
+        }
+    }
+    ul, div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+        li{
+            margin: 1rem 1.5rem;
+            cursor: pointer;
+            opacity: 0.6;
+        }
+    }
+    span{
+        color: $colorFoot;
+        font-size: 0.3;
+        text-align: center;
+    }
+    ul{
+        list-style-type: none;
+        color: $colorFoot;
+        font-size: 18px;
+    }
+}
+
+.title{
+    text-align: center;
+    font-size: 50px;
+    color: $titulo;
+    margin-top: 30px;
+    font-weight: 100;
+}
+

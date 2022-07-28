@@ -1,0 +1,372 @@
+@import "_commons.scss";
+@import "_fonts.scss";
+@import "_vars.scss";
+@import "_navFoot.scss";
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: $deco;
+    font-family: Arial, Helvetica, $sans;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+body{
+    background-color: $fondoColor;
+    font-family: $sans;
+    width: $completo;
+    position: relative;
+}
+
+//Inicio de grid
+//Creación del Index
+.grid-container{
+    grid-template-columns: .5fr .5fr;
+    grid-template-rows: 390px ;
+    display: grid;
+    background-color: $colorGrid;
+    border: 2px solid $black;
+    div{
+        border: solid $black 2px;
+        text-align: center;
+        p{
+            color: $colorParrafo;
+            padding: 10px 25px;
+            text-align: justify;
+        }
+        h1{
+            color: $titulo;
+            margin-top: 10px;
+        }
+        img{
+            width: $completo;
+        }
+    }
+}
+@media screen and (max-width: 800px){
+    .grid-container div{
+        overflow: hidden;
+    }
+    .grid-container img{
+        height: 100%;
+        width: 100%;
+    }
+    
+}
+
+.title{
+    text-align: center;
+    font-size: 50px;
+    color:  $titulo;
+    margin-top: 30px;
+    font-weight: 100;
+}
+
+//Inicio de galeria de destacados
+.destacados{
+    margin-bottom: 200px;
+    .container{
+        display: grid;
+        gap: 150px;
+        grid-auto-rows: 22rem;
+        grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
+        div{
+            width: 350px;
+            height: 430px;
+            border-radius: 8px;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            margin: 10px;
+            text-align: center;
+            transition: all 0.25s;
+            background-color: $colorGrid;
+            h4{
+                font-weight: 600;
+                color: $colorLinks;
+            }
+            p{
+                padding: 0 1rem;
+                font-size: 16px;
+                font-weight: 300;
+                color: $colorLinks;
+                margin-bottom: 10px;
+                margin-top: 10px;
+            }
+            iframe{
+                width: 350px;
+                height: 220px;
+            }
+            img{
+                width: 350px;
+                height: 220px;
+            }
+            &:hover{
+                transform: translateY(-15px);
+                box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+}
+//Fin del Index
+
+//Comienzo de la plantilla de jugadores
+
+.primerequipo{
+    position: relative;
+    display: grid;
+}
+.team{
+    text-align: center;
+    font-size: 80px;
+    color:  $titulo;
+    margin-top: .25rem;
+    font-weight: 100;
+}
+@media screen and (max-width: 800px){
+    .team{
+        font-size: 50px;
+    }
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    display: inline-block;
+    margin-bottom: 10px;
+    .item{
+        display: inline-block;
+        background: $colorNav;
+        color: $colorLinks;
+        padding: 10px 20px;
+        align-items: center;
+        text-decoration: $deco;
+    }
+}
+@media screen and (max-width: 800px){
+    .item{
+        font-size: 15px;
+        display: inline-block;
+        margin: 0 0;
+        align-items: center;
+        padding: 5px 5px;
+    }
+}
+
+.team-list{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 3rem;
+    line-height: 4.2rem;
+    text-align: center;
+    color: antiquewhite;
+    font-family: fcb-extra-bold,Arial,Helvetica Neue,Helvetica,sans-serif;
+    font-weight: 400;
+}
+
+div .galeria{
+    margin: 20px 20px;
+    box-shadow: 0 4px 8px 0 lightskyblue, 0 6px 20px 0 rgba(0,0,0,0.19);
+    float: left;
+    width: 350px;
+
+    img{
+        width: 100%;
+        height: auto;
+    }
+    .pie{
+        text-align: center;
+        text-shadow: 2px 2px 5px purple;
+        padding: 25px;
+        background-color:gray;
+        h1{
+            font-size: medium;
+        }
+        p{
+            font-size: 20px;
+        }
+    }
+}
+
+//Fin de Plantilla.html
+//Inicio de partidos.html
+.partidos{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    caption-side: bottom;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    th{
+        background-color: $azul;
+        color: $colorLinks;
+        text-align: center;
+        font-size: 10px;
+    }
+    td{
+        background-color: ivory;
+        text-align: center;
+    }
+    th, td{    
+        border: 2px solid $black;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+@media screen and (max-width: 800px){
+    .resultados{
+        margin-bottom: 20px;
+    }
+    .partidos th{
+        font-size: small;
+    }
+    .partidos td{
+        font-size: small;
+    }
+}
+//Fin de partidos.html
+
+//Inicio historia.html
+
+.historias{
+    background-color: $azul;
+    border: solid $black 5px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
+    div{
+        background-color: lightblue;
+        border: solid $black 5px;
+        margin: 20px;
+        padding: 5% 5%;
+        p{
+            line-height: 1.5;
+            font-size: 15px;
+            text-align: justify;
+        }
+    }
+}
+
+//Fin de historias.html
+
+//Inicio contacto
+.contact{
+    text-align: center;
+    font-size: 70px;
+    color: $titulo;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    font-weight: 100;
+}
+@media screen and (max-width: 800px){
+    .contact{
+        font-size: 40px;
+    }
+}
+.duda{
+    margin-left: 30px;
+    font-size: 40px;
+    color: $titulo;
+}
+@media screen and (max-width: 800px){
+    .duda{
+        font-size: 30px;
+    }
+}
+.parrafo{
+    font-size: 20px;
+    font-weight: 300;
+    color:$colorParrafo;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+@media screen and (max-width: 800px){
+    .parrafo{
+        font-size: 15px;
+        text-align: justify;
+        margin-right: 10px;
+    }
+}
+
+.contacto{
+    border: double $black 5px;
+    padding: 20px 50px;
+    color: $colorParrafo;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+@media screen and (max-width: 800px){
+    .contacto{
+        margin-top: 50px;
+        margin-bottom: 100px;
+        margin-left: 10px;
+        margin-right:10px;
+        padding: 10px 20px;
+        fieldset{
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 25px;
+            legend{
+                font-size: 30px;
+                color: $titulo;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                margin-left: 10px;            
+            }
+            .cons{
+                width: 700px;
+                height: 100px;
+            }
+        }
+    }
+    @media screen and (max-width: 800px){
+	    .contacto fieldset .cons{
+            width: 100%;
+            height: 100px;
+        .contacto fieldset{
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-bottom: 15px;
+        }
+    }
+}
+
+
+    
+
+}
+
+
+
+
+//Fin contacto
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Fin de la plantilla
+
+
+
+
