@@ -2,6 +2,11 @@
 @import "_fonts.scss";
 @import "_vars.scss";
 @import "_navFoot.scss";
+@import "_mixins.scss";
+
+p{
+    @include texto($colorParrafo, 16px);
+}
 
 *{
     padding: 0;
@@ -13,7 +18,7 @@
 }
 
 body{
-    background-color: $fondoColor;
+    background-color: map-get($map: $paleta, $key:'uno');
     font-family: $sans;
     width: $completo;
     position: relative;
@@ -25,13 +30,12 @@ body{
     grid-template-columns: .5fr .5fr;
     grid-template-rows: 390px ;
     display: grid;
-    background-color: $colorGrid;
+    background-color: map-get($map: $paleta, $key:'dos');
     border: 2px solid $black;
     div{
         border: solid $black 2px;
         text-align: center;
         p{
-            color: $colorParrafo;
             padding: 10px 25px;
             text-align: justify;
         }
@@ -80,16 +84,13 @@ body{
             margin: 10px;
             text-align: center;
             transition: all 0.25s;
-            background-color: $colorGrid;
+            background-color: map-get($map: $paleta, $key:'dos');
             h4{
                 font-weight: 600;
                 color: $colorLinks;
             }
             p{
                 padding: 0 1rem;
-                font-size: 16px;
-                font-weight: 300;
-                color: $colorLinks;
                 margin-bottom: 10px;
                 margin-top: 10px;
             }
@@ -137,7 +138,7 @@ body{
     margin-bottom: 10px;
     .item{
         display: inline-block;
-        background: $colorNav;
+        background: map-get($map: $paleta, $key:'dos');
         color: $colorLinks;
         padding: 10px 20px;
         align-items: center;
@@ -179,12 +180,9 @@ div .galeria{
         text-align: center;
         text-shadow: 2px 2px 5px purple;
         padding: 25px;
-        background-color:gray;
+        background-color:map-get($map: $paleta, $key:'ocho');
         h1{
             font-size: medium;
-        }
-        p{
-            font-size: 20px;
         }
     }
 }
@@ -199,13 +197,13 @@ div .galeria{
     margin-right: auto;
     border-collapse: collapse;
     th{
-        background-color: $azul;
+        background-color: map-get($map: $paleta, $key:'dos');
         color: $colorLinks;
         text-align: center;
         font-size: 10px;
     }
     td{
-        background-color: ivory;
+        background-color: map-get($map: $paleta, $key:'siete');
         text-align: center;
     }
     th, td{    
@@ -232,20 +230,19 @@ div .galeria{
 //Inicio historia.html
 
 .historias{
-    background-color: $azul;
+    background-color: map-get($map: $paleta, $key:'dos');
     border: solid $black 5px;
     margin-top: 50px;
     margin-bottom: 100px;
     margin-left: 10%;
     margin-right: 10%;
     div{
-        background-color: lightblue;
+        background-color: map-get($map: $paleta, $key:'nueve');
         border: solid $black 5px;
         margin: 20px;
         padding: 5% 5%;
         p{
             line-height: 1.5;
-            font-size: 15px;
             text-align: justify;
         }
     }
@@ -254,6 +251,9 @@ div .galeria{
 //Fin de historias.html
 
 //Inicio contacto
+.contacto{
+        background-color: map-get($map: $paleta, $key:'ocho');
+}
 .contact{
     text-align: center;
     font-size: 70px;

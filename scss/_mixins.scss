@@ -1,0 +1,27 @@
+//extends
+.social-icon-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+//mixin
+@mixin texto($color, $size) {
+  color: $color;
+  font-size: $size;
+}
+
+//maps 
+$paleta:(
+    'uno':#A50044,
+    'dos':#224079,
+    'tres':#121212,
+    'cuatro':antiquewhite,
+    'cinco':#f2f2f2,
+    'seis':#fff,
+    'siete':ivory,
+    'ocho':grey,
+    'nueve':lightblue,
+)
